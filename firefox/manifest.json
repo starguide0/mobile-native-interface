@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "messaging",
+  "version": "1.0",
+  "description": "firefox native interface",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "example@test.com"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["background.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "nativeMessaging",
+    "nativeMessagingFromContent",
+    "geckoViewAddons"
+  ]
+}
